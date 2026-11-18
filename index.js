@@ -1,5 +1,5 @@
 /**
- * dsh-session-search — 宿主半边。
+ * dsh-search-plus — 宿主半边。
  *
  * 目标：跨会话的中文全文搜索要「任意子串都能中」。DSH 自带的
  * `session-query-sqlite` 用 FTS5 `unicode61` 分词，连续汉字被当成一个 token，
@@ -24,7 +24,7 @@ import os from 'node:os'
 import path from 'node:path'
 import zlib from 'node:zlib'
 
-const ROUTE = '/api/dsh-session-search'
+const ROUTE = '/api/dsh-search-plus'
 const HOME = process.env.DSH_HOME || path.join(os.homedir(), '.dsh')
 const SESSIONS_ROOT = path.join(HOME, 'sessions')
 const CACHE_DIR = path.join(HOME, 'cache', 'session-search-panel')

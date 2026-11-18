@@ -1,5 +1,5 @@
 /**
- * dsh-session-search — 客户端半边。
+ * dsh-search-plus — 客户端半边。
  *
  * Ctrl+F 打开一个浮窗，搜所有会话的正文（宿主侧建好的语料，见 ./index.js），
  * 命中按会话分组，点一条直接切到那个会话。
@@ -9,7 +9,7 @@
  */
 
 window.__ModuleLoader__.load({
-  id: 'dsh-session-search',
+  id: 'dsh-search-plus',
   factory(require) {
     'use strict';
 
@@ -18,9 +18,9 @@ window.__ModuleLoader__.load({
     const h = React.createElement;
 
     const SLOT = 'conversation.session.header.utilities';
-    const SLOT_ID = 'dsh-session-search';
-    const STYLE_ID = 'dsh-session-search-style';
-    const API = '/api/dsh-session-search';
+    const SLOT_ID = 'dsh-search-plus';
+    const STYLE_ID = 'dsh-search-plus-style';
+    const API = '/api/dsh-search-plus';
     const DEBOUNCE_MS = 180;
 
     /** 把失败原因写到宿主的 diag.log，省得来回问「控制台里是什么」。 */
@@ -969,7 +969,7 @@ body[data-ds-dark-theme] .sss-tag[data-kind="assistant"][data-mc="doubao"]{--sss
         set({ open: false })
         const result = await navigateTo(hit)
         if (!result.ok) {
-          console.warn('[dsh-session-search] 切换会话失败：', result.reason)
+          console.warn('[dsh-search-plus] 切换会话失败：', result.reason)
           toast(`没能切到那条会话：${result.reason}`)
           return
         }

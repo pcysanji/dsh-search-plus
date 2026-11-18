@@ -1,15 +1,26 @@
 {
-  "name": "dsh-session-search",
+  "name": "dsh-search-plus",
   "version": "0.1.0",
-  "description": "跨会话中文全文搜索：Ctrl+P 浮窗，任意子串命中，定位到会话与消息。",
+  "description": "DSH 跨会话全文搜索浮窗：Ctrl+F 搜全部历史对话，任意中文子串命中，点结果定位到那句话。Cross-session full-text search overlay for DeepSeek Harness.",
   "keywords": [
     "dsh-plugin",
     "deepseek-harness",
     "deepseek-harness-plugin",
-    "search"
+    "search",
+    "full-text-search",
+    "session-search",
+    "cordis-plugin"
   ],
   "license": "MIT",
-  "author": "Changye Pan",
+  "author": "Changye Pan <pcysanji@163.com>",
+  "homepage": "https://github.com/pcysanji/dsh-search-plus#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcysanji/dsh-search-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pcysanji/dsh-search-plus/issues"
+  },
   "type": "module",
   "main": "index.js",
   "exports": {
@@ -21,8 +32,17 @@
     "index.js",
     "client.js",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "docs/screenshot-light.png",
+    "docs/screenshot-dark.png"
   ],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

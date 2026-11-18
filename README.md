@@ -1,4 +1,4 @@
-# dsh-session-search
+# dsh-search-plus
 
 DSH（DeepSeek Harness）的跨会话全文搜索浮窗：`Ctrl+F` 打开，搜所有会话的完整正文，命中按会话分组，点一条直接切过去并定位到那句话。
 
@@ -35,10 +35,10 @@ DSH 自带的搜索建在 SQLite FTS5 上，分词器是 `unicode61`：连续汉
 
 ## 安装
 
-插件市场（dsh.market）里搜 `dsh-session-search`，或在 DSH 的插件页安装 npm 包：
+插件市场（dsh.market）里搜 `dsh-search-plus`，或在 DSH 的插件页安装 npm 包：
 
 ```sh
-dsh plugin install dsh-session-search          # 按你的 DSH 版本选择命令
+dsh plugin install dsh-search-plus          # 按你的 DSH 版本选择命令
 ```
 
 本地开发用 `link:` 依赖挂进 profile 的 `dsh.profile.bundles`，改完重启 DSH 生效。
@@ -85,7 +85,7 @@ dsh plugin install dsh-session-search          # 按你的 DSH 版本选择命�
 
 - 插件启动 3 秒后在后台追平一次，只重读 size/mtime 变过的会话日志。
 - 会话日志被压缩重写（变小）时该会话旧正文标作废（代际 +1）；作废字节超过语料 30% 时整库重建。
-- 手动重建：`GET /api/dsh-session-search/reindex`。
+- 手动重建：`GET /api/dsh-search-plus/reindex`。
 
 ## 隐私
 

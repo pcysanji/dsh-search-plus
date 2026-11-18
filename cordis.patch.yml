@@ -1,0 +1,4 @@
+# dsh-session-search：登记宿主半边（HTTP 路由 + 索引）与客户端浮窗。
+- insert:
+    - id: session-search
+      name: 'dsh-session-search'
